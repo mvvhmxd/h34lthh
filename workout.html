@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  <script src="./workout/js/js/bootstrap.bundle.min.js"></script>
+  <script src="./workout/js/js/index.js"></script>
+  <script src="./workout/js/js/view.js"></script>
+  <link href="./exercise/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/workout.css">
+    <title>التمرين</title>
+</head>
+<body>
+    <main>
+        <header id="header">
+          
+          <nav>
+            <div class="container">
+              <div class="logo">
+                <img src="./img/E962CC49-8DD2-42DC-B3EE-2A5F95E59503.png" alt="" />
+              </div>
+  
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="./index.html">الصفحة الرئيسية
+                      </a>
+                  </li>
+                  <li>
+                    <a href="./calc.html">حاسبة السعرات</a>
+                  </li>
+                  <li>
+                    <a href="./diet.html">التغذية</a>
+                  </li>
+                  <li>
+                    <li>
+                      <a href="./workout.html">التمارين</a>
+                    
+                  <li>
+                    <a href="#contact">تواصل</a>
+                  </li>
+                  <li>
+                    <a href="./sign.html" class="active">تسجيل الدخول</a>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <section class="services section" id="services">
+          <section class="container">
+            <div class="section-header">
+              <h3 class="title" data-title="">التمرين</h3>
+              <p class="text">
+يساعدك التمرين علي المحافظة علي شكل جسمك و تحسين  صحتك العامة و جعل حياتك افضل              </p>
+            </div>
+          </section>
+        <section>
+          <div id="selections" class="container-sm">
+            <h2 class="text-center">كون تمرينك</h2>
+            <form>
+              <div class="form-group text-center">
+                <h4>Duration</h4>
+                <div class="row justify-content-center">
+                  <div class="col-md-6" accesskey="">
+                    <input type="range" class="form-range" min="10" max="50" step="1" id="durationrange" oninput="changeLiveDuration(this.value)" />
+                  </div>
+                </div>
+            </form>
+            <p><span class="badge rounded-pill bg-primary" id="durationValue">30</span> دقيقة</p>
+      
+            <div class="container text-center">
+              <h4>النوع</h4>
+              <div id="btntypecontainer" class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="btntype" id="btnTypestrength" autocomplete="off" value="strength" checked />
+                <label class="btn btn-outline-primary" for="btnTypestrength">قوة</label>
+      
+                <input type="radio" class="btn-check" name="btntype" id="btnTypecardio" autocomplete="off" value="cardio" />
+                <label class="btn btn-outline-primary" for="btnTypecardio">كارديو</label>
+              </div>
+              <p></p>
+              <h4>الجزء المستهدف</h4>
+              <div id="btnareacontainer" class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="btnarea" id="btnAreafull" autocomplete="off" value="full" checked />
+                <label class="btn btn-outline-primary" for="btnAreafull">جسم كامل</label>
+      
+                <input type="radio" class="btn-check" name="btnarea" id="btnArealower" autocomplete="off" value="lower" />
+                <label class="btn btn-outline-primary" for="btnArealower">جزء سفلي</label>
+      
+                <input type="radio" class="btn-check" name="btnarea" id="btnAreaupper" autocomplete="off" value="upper" />
+                <label class="btn btn-outline-primary" for="btnAreaupper">جزء علوي</label>
+      
+                <input type="radio" class="btn-check" name="btnarea" id="btnAreacore" autocomplete="off" value="core" />
+                <label class="btn btn-outline-primary" for="btnAreacore">جذع</label>
+              </div>
+              <p></p>
+              <h4>الشدة</h4>
+              <div id="btnintensitycontainer" class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="btnintensity" id="btnIntensitybeginner" autocomplete="off" value="beginner" checked />
+                <label class="btn btn-outline-primary" for="btnIntensitybeginner">مبتدا</label>
+      
+                <input type="radio" class="btn-check" name="btnintensity" id="btnIntensityintermediate" autocomplete="off" value="intermediate" />
+                <label class="btn btn-outline-primary" for="btnIntensityintermediate">متوسط</label>
+      
+                <input type="radio" class="btn-check" name="btnintensity" id="btnIntensityadvanced" autocomplete="off" value="advanced" />
+                <label class="btn btn-outline-primary" for="btnIntensityadvanced">متقدم</label>
+              </div>
+            </div>
+            <p></p>
+            <div id="buttonContainer" class="container">
+              <button type="button" class="btn m-2 btn-primary btn-lg d-inline" id="generateBtn" onclick="return getWorkout()">كون
+              </button>
+              
+            </div>
+            <button type="button" class="btn m-2 btn-danger btn-sm d-inline" id="resetBtn" onclick="resetOptions()">اعد تعيين الخيارات
+            </button>
+          </div>
+        </main>
+        </section>
+        
+        <section class="services section" id="services">
+          <section class="container">
+            <div class="section-header">
+              <p class="text">
+                <a href="./index.html" class="btn"> العودة الي الصفحة الرئيسية</a>  
+  
+          </p>
+            </div>
+            </section>
+        </section>
+
+
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <p class="text">
+            </p>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">الخدمات</h3>
+            <ul>
+             
+              <li>
+                <a href="./diet.html">الدايت</a>
+              </li>
+              <li>
+                <a href="./calc.html">حاسبة السعرات</a>
+              </li>
+              <li>
+                <a href="./workout.html">التمارين</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid-4-col footer-newstletter">
+            <h3 class="title-sm">اشترك</h3>
+            <p class="text">
+              ضع بريدك الاكتروني ليصلك كل جديد
+            </p>
+            <div class="footer-input-wrap">
+              <input type="email" class="footer-input" placeholder="Email" />
+              <a href="#" class="input-arrow">
+                <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="copyright">
+            <p class="text">
+              2022 حقوق النشر و الطباعة محفوظة&copy; 
+            </p>
+          </div>
+
+          <div class="followme-wrap">
+            <div class="followme">
+              <h3>تابعنا</h3>
+              <span class="footer-line"></span>
+              <div class="social-media">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="back-btn-wrap">
+              <a href="#" class="back-btn">
+                <i class="fas fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+
+<script type="text/javascript">
+  window.onload = indexPageLoad();
+</script>
+</html>

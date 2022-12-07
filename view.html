@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  s
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="./workout/js/js/bootstrap.bundle.min.js"></script>
+  <script src="./workout/js/js/view.js"></script>
+  <script type="text/javascript">
+    
+    window.onload = viewPageLoad();
+  </script>
+      <link href="./exercise/css/bootstrap.min.css" rel="stylesheet" />
+      <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  
+  <main>
+   
+    <div class="container-lg text-center">
+      <div class="row">
+        <div class="col-sm">
+          <h2 class="text-center">التمارين</h2>
+
+          <div id="accordionPlaceholder" class="accordion"></div>
+          <div class="container">
+            <button type="button" class="btn m-3 btn-primary btn-lg" onclick="return changeOptions()">
+غير الخيارات            </button>
+            <button type="button" class="btn m-3 btn-primary btn-lg" onclick="viewPageLoad()">
+اختر تمارين اخرى             </button>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h2 class="text-center">
+            السجل
+            <button type="button" class="btn m-2 btn-danger btn-sm d-inline" id="resetBtn" onclick="clearHistory()">
+              مسح
+            </button>
+            <a href="./index.html" class="btn"> العودة الي الصفحة الرئيسية</a>  
+
+          </h2>
+          <div id="listHistoryPlaceholder" class="accordion accordion-flush"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

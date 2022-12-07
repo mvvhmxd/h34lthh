@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Workout Generator - Inspiration for busy people" />
+  <meta name="author" content="Seb Hulse" />
+  <meta name="generator" content="" />
+  <link rel="canonical" href="https://sebhulse.com/fitness/web" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" class="container-sm"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const docs = "docs/DATA.md"
+    async function run() {
+      let file = await fetch(docs)
+      let text = await file.text()
+      document.getElementById('content').innerHTML =
+        marked.parse(text);
+      hljs.highlightAll();
+    }
+    run()
+  </script>
+</body>
+
+</html>

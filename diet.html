@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التغذية</title>
+    
+    <script src="https://kit.fontawesome.com/1e01342a2a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./css/bulma.css">    <link rel="stylesheet" href="./css/diet.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="./img/E962CC49-8DD2-42DC-B3EE-2A5F95E59503.png" alt="" />
+      </div>
+
+      <div class="links">
+        <ul>
+          <li>
+            <a href="./index.html">الصفحة الرئيسية
+              </a>
+          </li>
+          <li>
+            <a href="./calc.html">حاسبة السعرات</a>
+          </li>
+          <li>
+            <a href="./diet.html">التغذية</a>
+          </li>
+          <li>
+            <li>
+              <a href="./workout.html">التمارين</a>
+            
+          
+          <li>
+            <a href="#footer">تواصل</a>
+          </li>
+          <li>
+            <a href="./sign.html" class="active">تسجيل الدخول</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
+  
+  
+    <main class="tile is-ancestor main-wrapper">
+        <section class="tile is-6 is-vertical is-parent left-tile container">
+          <div class="tile is-child box section" id="ingredients-list">
+            <div class="column">
+              <div class="input-container">
+                <div class="field has-addons">
+                  <p class="control is-expanded">
+                    <input
+                      class="input"
+                      type="text"
+                      id="search-input"
+                      onkeypress="return (event.charCode > 64 && 
+                                  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+                    placeholder="اضف المكونات" />
+                </p>
+                <button class="button is-success add-container">
+                  <span class="icon is-medium add p-5">
+                    <i class="fas fa-plus-square"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="
+                    has-text-centered
+                    is-size-4
+                    has-text-weight-bold
+                    pt-2
+                    pb-4
+                  ">
+                اضف مكونات الطعام الذي  تريده باللغة الانجليزية
+              </div>
+              <div id="ingredient-list"></div>
+              <div class="has-text-centered mt-5">
+                <button class="recipeBtn button is-link is-success">
+                  ابحث
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <div class="tile is-6 is-parent right-tile is-hidden container">
+          <div class="tile is-child box">
+            <section class="section output">
+              
+              <div
+              class="
+              recipe-selected
+              columns
+              is-flex-direction-column is-hidden
+              "
+              >
+            </div>
+              
+                <div class="recipes-list columns is-flex-direction-column"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+     <footer><a href="./workout.html" class="btn"> التالي</a></footer>
+    </main>
+
+ 
+  <script src="./js/js/menu-toggle.js"></script>
+  <script src="./js/js/recipes.js"></script>
+  <script src="./js/js/displayRecipe.js"></script>
+</body>
+</html>
