@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../api"
+		},
+		{
+			"path": "../css"
+		},
+		{
+			"path": "../exercise"
+		},
+		{
+			"path": "../data"
+		},
+		{
+			"path": "../img"
+		},
+		{
+			"path": "../js"
+		},
+		{
+			"path": "../workout"
+		}
+	]
+}
